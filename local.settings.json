@@ -1,0 +1,15 @@
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "xxx",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "TopicName": "xxx",
+    "KafkaBroker": "xxx.southcentralus.azure.confluent.cloud:9092",
+    "KafkaUsername": "",
+    "KafkaPassword": "",
+    "LogAnalyticsWorkspaceId": "",
+    "LogAnalyticsSharedKey": "",
+    "LogAnalyticsTableName": "KafkaOrders"
+
+  }
+}

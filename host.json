@@ -1,0 +1,19 @@
+{
+  "version": "2.0",
+  "logging": {
+    "applicationInsights": {
+      "samplingSettings": {
+        "isEnabled": true,
+        "excludedTypes": "Request"
+      }
+    }
+  },
+  "extensions": {
+    "kafka": {
+      "maxBatchSize": 256,
+      "SubscriberIntervalInSeconds": 30,
+      "ExecutorChannelCapacity": 1,
+      "ChannelFullRetryIntervalInMs": 50
+    }
+  }
+}
