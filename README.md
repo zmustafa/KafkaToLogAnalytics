@@ -4,9 +4,9 @@ This Azure Function allows you to stream Kafka messages to Azure Log Analytics w
 
 Azure Function creates a Kafka based trigger and wait for messages. Once the mesage arrives, it connects to Azure Log Analytics Workspace using Data Collector API to upload the messages.
 
-Documentation on Apache Kafka trigger for Azure Function: https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-kafka-trigger
+Documentation on [Apache Kafka trigger for Azure Function](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-kafka-trigger)
 
-Documentation on Log Analytics Data Collector API: https://learn.microsoft.com/en-us/rest/api/loganalytics/create-request
+Documentation on [Log Analytics Data Collector API](https://learn.microsoft.com/en-us/rest/api/loganalytics/create-request)
 
 
 These settings should be specified in Configuration of Azure Function
