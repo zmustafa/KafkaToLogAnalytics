@@ -1,4 +1,4 @@
-# Stream Kafta messages to Azure Log Analytics
+# Stream Kafka messages to Azure Log Analytics
 This Azure Function allows you to stream Kafka (Apache Kafka, Confluent Kafka, etc) messages to Azure Log Analytics workspace.
 
 
