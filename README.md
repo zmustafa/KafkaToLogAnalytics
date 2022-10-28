@@ -1,6 +1,7 @@
 # Stream Kafka messages to Azure Log Analytics workspace
 This Azure Function allows you to stream Kafka (Apache Kafka, Confluent Kafka, etc) messages to Azure Log Analytics workspace.
 
+The messages are read from the specified topic in Kafka and then sent to a specified Custom Log table in Azure Log Analytics workspace table.
 
 ## How it works
 Azure Function creates a Kafka based trigger and wait for messages. Once the mesage arrives, it connects to Azure Log Analytics Workspace using Data Collector API to upload the messages. The messages are batched together based on batching setting specified below. 
