@@ -26,13 +26,11 @@ namespace KafkaToLogAnalyticsFunction
         private static string RequestBaseUrl { get; set; }
 
 
-        [FunctionName("KafkaToLogAnalytics")]
+       [FunctionName("KafkaToLogAnalytics")]
         public static async Task Run(
             [KafkaTrigger("%KafkaBroker%",
                 "%TopicName%",
-                Username = "%KafkaUsername%",
-                Password = "%KafkaPassword%",
-                Protocol = BrokerProtocol.SaslSsl,
+                Protocol = BrokerProtocol.Plaintext,
                 AuthenticationMode = BrokerAuthenticationMode.Plain,
                 ConsumerGroup = "$Default")]
             KafkaEventData<string>[] events, ILogger log)
