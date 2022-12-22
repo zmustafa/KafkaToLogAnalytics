@@ -3,7 +3,8 @@
   "Values": {
     "AzureWebJobsStorage": "xxx",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-    "TopicName": "xxx",
+    "TopicName1": "xxx",
+    "TopicName2": "yyy",
     "KafkaBroker": "xxx.southcentralus.azure.confluent.cloud:9092",
     "KafkaUsername": "",
     "KafkaPassword": "",
