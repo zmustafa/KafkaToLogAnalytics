@@ -15,7 +15,7 @@ using Newtonsoft.Json;
 
 namespace KafkaToLogAnalyticsFunction
 {
-    public class KafkaToLogAnalytics
+    public class KafkaToLogAnalytics1
     {
         private static string ApiVersion = "2016-04-01";
         private static HttpClient httpClient;
@@ -26,12 +26,11 @@ namespace KafkaToLogAnalyticsFunction
         private static string RequestBaseUrl { get; set; }
 
 
-       [FunctionName("KafkaToLogAnalytics")]
+        [FunctionName("KafkaToLogAnalytics1")]
         public static async Task Run(
             [KafkaTrigger("%KafkaBroker%",
-                "%TopicName%",
+                "%TopicName1%",
                 Protocol = BrokerProtocol.Plaintext,
-                AuthenticationMode = BrokerAuthenticationMode.Plain,
                 ConsumerGroup = "$Default")]
             KafkaEventData<string>[] events, ILogger log)
         {
