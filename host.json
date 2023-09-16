@@ -1,5 +1,6 @@
 {
   "version": "2.0",
+  "FUNCTIONS_EXTENSION_VERSION" : "~4",
   "logging": {
     "applicationInsights": {
       "samplingSettings": {
