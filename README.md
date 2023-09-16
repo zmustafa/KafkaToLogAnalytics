@@ -14,13 +14,20 @@ Documentation on [Log Analytics Data Collector API](https://learn.microsoft.com/
 ## Mandatory Settings
 These settings should be specified in Configuration of Azure Function
 
-    "TopicName": "%% kafka topic name",
-    "KafkaBroker": "%% kafka broker fqdn for example xx.southcentralus.azure.confluent.cloud:9092",
-    "KafkaUsername": "%% kafka user name",
-    "KafkaPassword": "%% kafka password",
-    "LogAnalyticsWorkspaceId": "%% log analytics workspace id, usually a guid",
-    "LogAnalyticsSharedKey": "%% log analytics shared key, usually a base64 long string",
-    "LogAnalyticsTableName": "%% custom table that will be created to store messages coming from kafka"
+    "TopicName1": "Topic1",
+    "TopicName2": "Topic2",
+    "TopicName3": "Topic3",
+    "TopicName4": "Topic4",
+    "TopicName5": "Topic5",
+    "KafkaBroker": "1.1.1.1:9092",
+    "LogAnalyticsWorkspaceId": "xxx",
+    "LogAnalyticsSharedKey": "xxxx",
+    "LogAnalyticsTableName": "LogAnalyticsTableName",
+    "AzureWebJobs.KafkaToLogAnalytics1.Disabled": false,
+    "AzureWebJobs.KafkaToLogAnalytics2.Disabled": true,
+    "AzureWebJobs.KafkaToLogAnalytics3.Disabled": true,
+    "AzureWebJobs.KafkaToLogAnalytics4.Disabled": true,
+    "AzureWebJobs.KafkaToLogAnalytics5.Disabled": true
 
 ## Optional Settings
 In order to adjust the frequency of ingestion, these two settings can be modified in the host.json. More details are [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-kafka?tabs=in-process%2Cportal&pivots=programming-language-csharp#hostjson-settings).
