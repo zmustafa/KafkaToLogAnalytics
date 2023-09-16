@@ -30,7 +30,7 @@ These settings should be specified in Configuration of Azure Function
     "AzureWebJobs.KafkaToLogAnalytics5.Disabled": true
 
 ## Optional Settings
-In order to adjust the frequency of ingestion, these two settings can be modified in the host.json. More details are [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-kafka?tabs=in-process%2Cportal&pivots=programming-language-csharp#hostjson-settings).
+In order to adjust the frequency of ingestion, these settings can be modified in the host.json. More details are [here](https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-kafka?tabs=in-process%2Cportal&pivots=programming-language-csharp#hostjson-settings).
 
       "maxBatchSize": 256,
       "SubscriberIntervalInSeconds": 30,
