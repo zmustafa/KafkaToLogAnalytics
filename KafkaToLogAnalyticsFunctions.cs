@@ -21,7 +21,11 @@ namespace KafkaToLogAnalyticsFunction
         private static string ApiVersion = "2016-04-01";
         private static string WorkspaceId = Environment.GetEnvironmentVariable("LogAnalyticsWorkspaceId");
         private static string SharedKey = Environment.GetEnvironmentVariable("LogAnalyticsSharedKey");
-        private static string LogAnalyticsTableName = Environment.GetEnvironmentVariable("LogAnalyticsTableName");
+        private static string LogAnalyticsTableName1 = Environment.GetEnvironmentVariable("LogAnalyticsTableName1");
+        private static string LogAnalyticsTableName2 = Environment.GetEnvironmentVariable("LogAnalyticsTableName2");
+        private static string LogAnalyticsTableName3 = Environment.GetEnvironmentVariable("LogAnalyticsTableName3");
+        private static string LogAnalyticsTableName4 = Environment.GetEnvironmentVariable("LogAnalyticsTableName4");
+        private static string LogAnalyticsTableName5 = Environment.GetEnvironmentVariable("LogAnalyticsTableName5");
 
 
 
@@ -39,7 +43,7 @@ namespace KafkaToLogAnalyticsFunction
             var eventsData = "[" + string.Join(",", events.Select(eventData => eventData.Value).ToList()) + "]";
             Console.WriteLine($"Sending {events.Count()} events.");
             await LogAnalyticsUtility
-                .SendLogEntries(eventsData, LogAnalyticsTableName, WorkspaceId, ApiVersion, SharedKey)
+                .SendLogEntries(eventsData, LogAnalyticsTableName1, WorkspaceId, ApiVersion, SharedKey)
                 .ConfigureAwait(false);
         }
 
@@ -55,7 +59,7 @@ namespace KafkaToLogAnalyticsFunction
             var eventsData = "[" + string.Join(",", events.Select(eventData => eventData.Value).ToList()) + "]";
             Console.WriteLine($"Sending {events.Count()} events.");
             await LogAnalyticsUtility
-                .SendLogEntries(eventsData, LogAnalyticsTableName, WorkspaceId, ApiVersion, SharedKey)
+                .SendLogEntries(eventsData, LogAnalyticsTableName2, WorkspaceId, ApiVersion, SharedKey)
                 .ConfigureAwait(false);
         }
 
@@ -71,7 +75,7 @@ namespace KafkaToLogAnalyticsFunction
             var eventsData = "[" + string.Join(",", events.Select(eventData => eventData.Value).ToList()) + "]";
             Console.WriteLine($"Sending {events.Count()} events.");
             await LogAnalyticsUtility
-                .SendLogEntries(eventsData, LogAnalyticsTableName, WorkspaceId, ApiVersion, SharedKey)
+                .SendLogEntries(eventsData, LogAnalyticsTableName3, WorkspaceId, ApiVersion, SharedKey)
                 .ConfigureAwait(false);
         }
 
@@ -87,7 +91,7 @@ namespace KafkaToLogAnalyticsFunction
             var eventsData = "[" + string.Join(",", events.Select(eventData => eventData.Value).ToList()) + "]";
             Console.WriteLine($"Sending {events.Count()} events.");
             await LogAnalyticsUtility
-                .SendLogEntries(eventsData, LogAnalyticsTableName, WorkspaceId, ApiVersion, SharedKey)
+                .SendLogEntries(eventsData, LogAnalyticsTableName4, WorkspaceId, ApiVersion, SharedKey)
                 .ConfigureAwait(false);
         }
 
@@ -103,13 +107,13 @@ namespace KafkaToLogAnalyticsFunction
             var eventsData = "[" + string.Join(",", events.Select(eventData => eventData.Value).ToList()) + "]";
             Console.WriteLine($"Sending {events.Count()} events.");
             await LogAnalyticsUtility
-                .SendLogEntries(eventsData, LogAnalyticsTableName, WorkspaceId, ApiVersion, SharedKey)
+                .SendLogEntries(eventsData, LogAnalyticsTableName5, WorkspaceId, ApiVersion, SharedKey)
                 .ConfigureAwait(false);
         }
 
         private static void CheckIfValuesAreSet(string topicName)
         {
-            if (LogAnalyticsTableName == null)
+            if (LogAnalyticsTableName1 == null)
             {
                 throw new MissingFieldException("LogAnalyticsTableName is empty");
             }
